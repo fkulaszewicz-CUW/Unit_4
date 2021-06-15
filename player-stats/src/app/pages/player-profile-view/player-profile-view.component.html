@@ -35,54 +35,70 @@
                 </div>
                 <div class="line-config">
                     <p>
-                        Team Rank: #1 &nbsp;||&nbsp; Position: "PF" &nbsp;||&nbsp; Points PG: 27.7 &nbsp;||&nbsp; Exp: 5
+                        Team Rank: #{{profiles.teamRankOverall}} &nbsp;||&nbsp; Position: {{profiles.position}}
+                        &nbsp;||&nbsp; Points PG: {{profiles.fieldGoalsOverall.pointsPerGame}} &nbsp;||&nbsp; Exp:
+                        {{profiles.experience}}
                         Years
                     </p>
                 </div>
                 <div class="line-config">
                     <p>
-                        Birth Date: 1994-12-06 &nbsp;||&nbsp; Age: "24" &nbsp;||&nbsp; Height: 6-11 &nbsp;||&nbsp;
-                        Weight: 242
+                        Birth Date: {{profiles.birth}} &nbsp;||&nbsp; Age: {{profiles.age}} &nbsp;||&nbsp; Height:
+                        {{profiles.characteristics.height}} &nbsp;||&nbsp;
+                        Weight: {{profiles.characteristics.weight}}
                     </p>
                 </div>
                 <div class="line-config">
                     <p>
-                        Games - Played: 72 &nbsp;||&nbsp; Started: 72 &nbsp;||&nbsp; Minutes Per Game: 32.8
+                        Games - Played: {{profiles.games.played}} &nbsp;||&nbsp; Started: {{profiles.games.started}}
+                        &nbsp;||&nbsp; Minutes Per Game: {{profiles.games.minutesPerGame}}
                     </p>
                 </div>
                 <div class="line-config">
                     <p>
-                        Overall Field Goals - Made: 10 &nbsp;||&nbsp; Attempts: 17.3 &nbsp;||&nbsp; Avg: 0.578
+                        Overall Field Goals - Made: {{profiles.fieldGoalsOverall.goalsMade}} &nbsp;||&nbsp; Attempts:
+                        {{profiles.fieldGoalsOverall.goalAttempts}} &nbsp;||&nbsp; Avg:
+                        {{profiles.fieldGoalsOverall.goalPercentage}}
                     </p>
                 </div>
                 <div class="line-config">
                     <p>
-                        Overall 2-pt Goals - Made: 9.3 &nbsp;||&nbsp; Attempts: 14.5 &nbsp;||&nbsp; Avg: 0.641
+                        Overall 2-pt Goals - Made: {{profiles.fieldTwo.twoPointMade}} &nbsp;||&nbsp; Attempts:
+                        {{profiles.fieldTwo.twoPointAttempts}} &nbsp;||&nbsp; Avg:
+                        {{profiles.fieldTwo.twoPointPercentage}}
                     </p>
                 </div>
                 <div class="line-config">
                     <p>
-                        Overall 3-pt Goals - Made: 0.7 &nbsp;||&nbsp; Attempts: 2.8 &nbsp;||&nbsp; Avg: 0.256
+                        Overall 3-pt Goals - Made: {{profiles.fieldThree.threePointMade}} &nbsp;||&nbsp; Attempts:
+                        {{profiles.fieldThree.threePointAttempts}} &nbsp;||&nbsp; Avg:
+                        {{profiles.fieldThree.threePointPercentage}}
                     </p>
                 </div>
                 <div class="line-config">
                     <p>
-                        Overall Free Points - Made: 6.9 &nbsp;||&nbsp; Attempts: 9.5 &nbsp;||&nbsp; Avg: 0.729
+                        Overall Free Points - Made: {{profiles.freeThrow.freePointMade}} &nbsp;||&nbsp; Attempts:
+                        {{profiles.freeThrow.freePointAttempts}} &nbsp;||&nbsp; Avg:
+                        {{profiles.freeThrow.freePointPercentage}}
                     </p>
                 </div>
                 <div class="line-config">
                     <p>
-                        Rebounds - Offense: 2.2 &nbsp;||&nbsp; Defense: 10.3 &nbsp;||&nbsp; Total PG: 12.5
+                        Rebounds - Offense: {{profiles.floor.rebounds.offense}} &nbsp;||&nbsp; Defense:
+                        {{profiles.floor.rebounds.defense}} &nbsp;||&nbsp; Total PG:
+                        {{profiles.floor.rebounds.totalPerGame}}
                     </p>
                 </div>
                 <div class="line-config">
                     <p>
-                        Assists: 5.9 &nbsp;||&nbsp; Steals: 1.3 &nbsp;||&nbsp; Blocks: 1.5 &nbsp;||&nbsp; Turnovers: 3.7
-                        &nbsp;||&nbsp; Fouls: 3.2
+                        Assists: {{profiles.floor.assists}} &nbsp;||&nbsp; Steals: {{profiles.floor.steals}}
+                        &nbsp;||&nbsp; Blocks: {{profiles.floor.blocks}} &nbsp;||&nbsp; Turnovers:
+                        {{profiles.floor.turnovers}}
+                        &nbsp;||&nbsp; Fouls: {{profiles.floor.fouls}}
                     </p>
                 </div>
                 <div class="update-delete-button">
-                    <a class="button is-success" routerLink="/">
+                    <a class="button is-success" [routerLink]="['/update-profile', selectedProfileId]">
                         Update Player Profile
                     </a>
                     <a class="button is-danger" (click)="onDeleteProfileClick()">

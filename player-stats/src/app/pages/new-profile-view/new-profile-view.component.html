@@ -32,59 +32,28 @@
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input #birth class="input" type="text" placeholder="Birth Date: YYYY-MM-DD">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input #age class="input" type="text" placeholder="Age">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input #height class="input" type="text" placeholder="Height: Feet-Inches">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="field is-horizontal">
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
-                        </div>
-                    </div>
-                </div>
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
-                        </div>
-                    </div>
-                </div>
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
-                        </div>
-                    </div>
-                </div>
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input #weight class="input" type="text" placeholder="Weight: Lbs">
                         </div>
                     </div>
                 </div>
@@ -94,28 +63,28 @@
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input #position class="input" type="text" placeholder="Player Position - XX">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input #experience class="input" type="text" placeholder="Experience in Years">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input #uniformNumber class="input" type="text" placeholder="Uniform Number">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input #teamRankOverall class="input" type="text" placeholder="Team Rank Overall">
                         </div>
                     </div>
                 </div>
@@ -125,28 +94,59 @@
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input #gamesPlayed class="input" type="text" placeholder="Games Played">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input #gamesStarted class="input" type="text" placeholder="Games Started">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input #minutesPlayedPerGame class="input" type="text" placeholder="Minutes Played Per Game">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input #overallGoalsMade class="input" type="text" placeholder="Overall Field Goals Made">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input #overallGoalAttempts class="input" type="text" placeholder="Overall Field Goal Attempts">
+                        </div>
+                    </div>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input #overallGoalPercentage class="input" type="text" placeholder="Overall Field Goal Percent">
+                        </div>
+                    </div>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input #averagePointsPerGame class="input" type="text" placeholder="Points Per Game">
+                        </div>
+                    </div>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input #twoPointMade class="input" type="text" placeholder="Two Point Made">
                         </div>
                     </div>
                 </div>
@@ -284,7 +284,10 @@
                 </p>
                 <p class="control-button">
                     <a class="button is-success is-medium" (click)="createPlayerProfile(
-                        first.value, last.value
+                        first.value, last.value, birth.value, age.value, height.value, weight.value, 
+                        position.value, experience.value, uniformNumber.value, teamRankOverall.value, gamesPlayed.value,
+                        gamesStarted.value, minutesPlayedPerGame.value, overallGoalsMade.value, overallGoalAttempts.value,
+                        overallGoalPercentage.value, averagePointsPerGame.value, twoPointMade.value
                     )" *ngIf="show">
                         Create
                     </a>

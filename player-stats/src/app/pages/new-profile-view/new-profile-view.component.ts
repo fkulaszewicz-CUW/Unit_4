@@ -15,7 +15,11 @@ export class NewProfileViewComponent implements OnInit {
   show: string = 'show';
   ngOnInit(): void {
   }
-  createPlayerProfile(first: string, last: string) {
+  createPlayerProfile(first: string, last: string, birth: string, age: string, height: string,
+    weight: string, position: string, experience: string, uniformNumber: string, teamRankOverall: string,
+    gamesPlayed: string, gamesStarted: string, minutesPlayedPerGame: string, overallGoalsMade: string,
+    overallGoalAttempts: string, overallGoalPercentage: string, averagePointsPerGame: string,
+    twoPointMade: string) {
     this.message = '';
     this.success = '';
     this.show = 'show';
@@ -24,11 +28,13 @@ export class NewProfileViewComponent implements OnInit {
       console.log("Test");
       this.message = 'show';
     } else {
-      this.playerDataService.createPlayer(first, last).subscribe((response: any) => {
-        this.success = response.message;
-        this.show = '';
-        console.log(response.message)
-      });
+      this.playerDataService.createPlayer(first, last, birth, age, height, weight, position,
+        experience, uniformNumber, teamRankOverall, gamesPlayed, gamesStarted, minutesPlayedPerGame,
+        overallGoalsMade, overallGoalAttempts, overallGoalPercentage, averagePointsPerGame, twoPointMade).subscribe((response: any) => {
+          this.success = response.message;
+          this.show = '';
+          console.log(response.message)
+        });
     }
   }
 }

@@ -8,8 +8,14 @@ export class PlayerDataService {
 
   constructor(private webReqService: WebRequestService) { }
 
-  createPlayer(first: string, last: string) {
-    return this.webReqService.post('database/playerProfile', { first, last })
+  createPlayer(first: string, last: string, birth: string, age: string, height: string, weight: string,
+    position: string, experience: string, uniformNumber: string, teamRankOverall: string, gamesPlayed: string,
+    gamesStarted: string, minutesPlayedPerGame: string, overallGoalsMade: string, overallGoalAttempts: string,
+    overallGoalPercentage: string, averagePointsPerGame: string, twoPointMade: string) {
+    return this.webReqService.post('database/playerProfile', {
+      first, last, birth, age, height, weight, position, experience, uniformNumber, teamRankOverall, gamesPlayed, gamesStarted,
+      minutesPlayedPerGame, overallGoalsMade, overallGoalAttempts, overallGoalPercentage, averagePointsPerGame, twoPointMade
+    })
   }
 
   updatePlayer(profileId: string, first: string, last: string) {

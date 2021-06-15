@@ -28,7 +28,6 @@ export class PlayerProfileViewComponent implements OnInit {
 
     this.playerDataService.getRoster().subscribe((rosters: any) => {
       this.rosters = rosters.data;
-      // console.log(this.rosters);
     })
   }
 
@@ -36,7 +35,6 @@ export class PlayerProfileViewComponent implements OnInit {
     console.log(this.selectedProfileId);
     if (this.selectedProfileId) {
       this.playerDataService.deleteProfile(this.selectedProfileId).subscribe((response: any) => {
-        console.log(response);
         window.location.reload();
       })
     }

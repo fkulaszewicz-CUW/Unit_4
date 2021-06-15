@@ -2,12 +2,14 @@
     <div class="create-player-profile-container">
         <div class="player-profile">
             <h1 class="title has-text-black">
-                Update Player Profile
+                Update Player Profile For:
             </h1>
-            <!-- <p class="help is-size-5" *ngIf="success">
+            <p class="name has-text-black is-size-3" *ngIf="profiles">
+                {{profiles.name.first}} {{profiles.name.last}}
+            </p>
+            <p class="help is-size-5" *ngIf="success">
                 {{success}}
-            </p> -->
-
+            </p>
             <div class="field is-horizontal">
                 <div class="field-body">
                     <div class="field">
@@ -282,7 +284,7 @@
                 <p class="control-button">
                     <a class="button is-success is-medium" (click)="updatePlayerProfile(
                         first.value, last.value
-                    )">
+                    )" *ngIf="show">
                         Update
                     </a>
                 </p>

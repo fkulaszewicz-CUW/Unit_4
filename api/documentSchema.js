@@ -1,162 +1,6 @@
 var mongoose = require('mongoose');
 
 // schema
-// var playerSchema = mongoose.Schema({
-//     name: {
-//         first: {
-//             type: String,
-//             required: true
-//         },
-//         last: {
-//             type: String,
-//             required: true
-//         }
-//     },
-//     birth: {
-//         type: String,
-//         required: true
-//     },
-//     age: {
-//         type: Number,
-//         required: true
-//     },
-//     characteristics: {
-//         height: {
-//             type: String,
-//             required: true
-//         },
-//         weight: {
-//             type: Number,
-//             required: true
-//         }
-//     },
-//     position: {
-//         type: String,
-//         required: true
-//     },
-//     experience: {
-//         type: Number,
-//         required: true
-//     },
-//     uniformNumber: {
-//         type: Number,
-//         required: true
-//     },
-//     teamRankOverall: {
-//         type: Number,
-//         required: true
-//     },
-//     games: {
-//         played: {
-//             type: Number,
-//             required: true
-//         },
-//         started: {
-//             type: Number,
-//             required: true
-//         },
-//         minutesPerGame: {
-//             type: Number,
-//             required: true
-//         }
-//     },
-//     fieldGoalsOverall: {
-//         goalsMade: {
-//             type: Number,
-//             required: true
-//         },
-//         goalAttempts: {
-//             type: Number,
-//             required: true
-//         },
-//         goalPercentage: {
-//             type: Number,
-//             required: true
-//         },
-//         pointsPerGame: {
-//             type: Number,
-//             required: true
-//         }
-//     },
-//     fieldTwo: {
-//         twoPointMade: {
-//             type: Number,
-//             required: true
-//         },
-//         twoPointAttempts: {
-//             type: Number,
-//             required: true
-//         },
-//         twoPointPercentage: {
-//             type: Number,
-//             required: true
-//         }
-//     },
-//     fieldThree: {
-//         threePointMade: {
-//             type: Number,
-//             required: true
-//         },
-//         threePointAttempts: {
-//             type: Number,
-//             required: true
-//         },
-//         threePointPercentage: {
-//             type: Number,
-//             required: true
-//         }
-//     },
-//     freeThrow: {
-//         freePointMade: {
-//             type: Number,
-//             required: true
-//         },
-//         freePointAttempts: {
-//             type: Number,
-//             required: true
-//         },
-//         freePointPercentage: {
-//             type: Number,
-//             required: true
-//         }
-//     },
-//     floor: {
-//         rebounds: {
-//             offense: {
-//                 type: Number,
-//                 required: true
-//             },
-//             defense: {
-//                 type: Number,
-//                 required: true
-//             },
-//             totalPerGame: {
-//                 type: Number,
-//                 required: true
-//             }
-//         },
-//         assists: {
-//             type: Number,
-//             required: true
-//         },
-//         steals: {
-//             type: Number,
-//             required: true
-//         },
-//         blocks: {
-//             type: Number,
-//             required: true
-//         },
-//         turnovers: {
-//             type: Number,
-//             required: true
-//         },
-//         fouls: {
-//             type: Number,
-//             required: true
-//         }
-//     },
-// });
 var playerSchema = mongoose.Schema({
     name: {
         first: {
@@ -169,115 +13,147 @@ var playerSchema = mongoose.Schema({
         }
     },
     birth: {
-        type: String
+        type: String,
+        required: true
     },
     age: {
-        type: Number
+        type: Number,
+        required: true
     },
     characteristics: {
         height: {
-            type: String
+            type: String,
+            required: true
         },
         weight: {
-            type: Number
+            type: Number,
+            required: true
         }
     },
     position: {
-        type: String
+        type: String,
+        required: true
     },
     experience: {
-        type: Number
+        type: Number,
+        required: true
     },
     uniformNumber: {
-        type: Number
+        type: Number,
+        required: true
     },
     teamRankOverall: {
-        type: Number
+        type: Number,
+        required: true
     },
     games: {
         played: {
-            type: Number
+            type: Number,
+            required: true
         },
         started: {
-            type: Number
+            type: Number,
+            required: true
         },
         minutesPerGame: {
-            type: Number
+            type: Number,
+            required: true
         }
     },
     fieldGoalsOverall: {
         goalsMade: {
-            type: Number
+            type: Number,
+            required: true
         },
         goalAttempts: {
-            type: Number
+            type: Number,
+            required: true
         },
         goalPercentage: {
-            type: Number
+            type: Number,
+            required: true
         },
         pointsPerGame: {
-            type: Number
+            type: Number,
+            required: true
         }
     },
     fieldTwo: {
         twoPointMade: {
-            type: Number
+            type: Number,
+            required: true
         },
         twoPointAttempts: {
-            type: Number
+            type: Number,
+            required: true
         },
         twoPointPercentage: {
-            type: Number
+            type: Number,
+            required: true
         }
     },
     fieldThree: {
         threePointMade: {
-            type: Number
+            type: Number,
+            required: true
         },
         threePointAttempts: {
-            type: Number
+            type: Number,
+            required: true
         },
         threePointPercentage: {
-            type: Number
+            type: Number,
+            required: true
         }
     },
     freeThrow: {
         freePointMade: {
-            type: Number
+            type: Number,
+            required: true
         },
         freePointAttempts: {
-            type: Number
+            type: Number,
+            required: true
         },
         freePointPercentage: {
-            type: Number
+            type: Number,
+            required: true
         }
     },
     floor: {
         rebounds: {
             offense: {
-                type: Number
+                type: Number,
+                required: true
             },
             defense: {
-                type: Number
+                type: Number,
+                required: true
             },
             totalPerGame: {
-                type: Number
+                type: Number,
+                required: true
             }
         },
         assists: {
-            type: Number
+            type: Number,
+            required: true
         },
         steals: {
-            type: Number
+            type: Number,
+            required: true
         },
         blocks: {
-            type: Number
+            type: Number,
+            required: true
         },
         turnovers: {
-            type: Number
+            type: Number,
+            required: true
         },
         fouls: {
-            type: Number
+            type: Number,
+            required: true
         }
     },
 });
