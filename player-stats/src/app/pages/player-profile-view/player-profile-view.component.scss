@@ -1,0 +1,118 @@
+@import '../../../main-styles.scss';
+
+.centered-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.player-profile-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    max-height: 800px;
+}
+
+.sidebar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 25px;
+    width: 300px;
+    background: $primary;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.button-location {
+    display: flex;
+    padding: 25px;
+}
+
+.player-profile {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 25px;
+    background: rgb(216, 216, 216);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.view-profile-container {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 90%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+
+    .line-one {
+        display: flex;
+        font-family: 'Times New Roman';
+        font-size: 26px;
+        letter-spacing: 1px;
+        padding-bottom: 5px;
+        color: black;
+    }
+    .line-config {
+        display: flex;
+        font-family: 'Times New Roman';
+        font-size: 22px;
+        letter-spacing: 1px;
+        padding: 10px;
+        background-color: #7deba7;
+        border-radius: 30px;
+        color: black;
+        margin-bottom: 10px;
+    }
+
+}
+
+.title {
+    font-family: 'Times New Roman';
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+.players-list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    background: #eee1c6;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    .players-list-item {
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-radius: 45px;
+        width: 100%;
+        color: black;
+        margin-bottom: 2px;
+        font-size: 16px;
+
+        &:hover {
+            background: $gray;
+        }
+
+    }
+}
+
+.update-delete-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
