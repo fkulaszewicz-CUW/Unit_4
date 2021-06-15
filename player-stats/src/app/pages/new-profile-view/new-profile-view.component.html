@@ -10,7 +10,6 @@
             <p class="help is-size-5" *ngIf="success">
                 {{success}}
             </p>
-
             <div class="field is-horizontal">
                 <div class="field-body">
                     <div class="field">
@@ -108,7 +107,8 @@
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input #minutesPlayedPerGame class="input" type="text" placeholder="Minutes Played Per Game">
+                            <input #minutesPlayedPerGame class="input" type="text"
+                                placeholder="Minutes Played Per Game">
                         </div>
                     </div>
                 </div>
@@ -125,14 +125,16 @@
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input #overallGoalAttempts class="input" type="text" placeholder="Overall Field Goal Attempts">
+                            <input #overallGoalAttempts class="input" type="text"
+                                placeholder="Overall Field Goal Attempts">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input #overallGoalPercentage class="input" type="text" placeholder="Overall Field Goal Percent">
+                            <input #overallGoalPercentage class="input" type="text"
+                                placeholder="Overall Field Goal Percent">
                         </div>
                     </div>
                 </div>
@@ -156,59 +158,28 @@
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input #twoPointAttempts class="input" type="text" placeholder="Two Point Attempts">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input #twoPointPercentage class="input" type="text" placeholder="Two Point Percentage">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input #threePointMade class="input" type="text" placeholder="Three Point Made">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="field is-horizontal">
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
-                        </div>
-                    </div>
-                </div>
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
-                        </div>
-                    </div>
-                </div>
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
-                        </div>
-                    </div>
-                </div>
-                <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input #threePointAttempts class="input" type="text" placeholder="Three Point Attempts">
                         </div>
                     </div>
                 </div>
@@ -218,28 +189,28 @@
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input #threePointPercentage class="input" type="text" placeholder="Three Point Percentage">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input #freePointMade class="input" type="text" placeholder="Free Points Made">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input #freePointAttempts class="input" type="text" placeholder="Free Points Attempts">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input #freePointPercentage class="input" type="text" placeholder="Free Point Percent">
                         </div>
                     </div>
                 </div>
@@ -249,28 +220,59 @@
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input #reboundsOffense class="input" type="text" placeholder="Rebounds Offense">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input #reboundsDefense class="input" type="text" placeholder="Rebounds Defense">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="First Name">
+                            <input #totalReboundsPerGame class="input" type="text" placeholder="Total Rebounds PG">
                         </div>
                     </div>
                 </div>
                 <div class="field-body">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="Last Name">
+                            <input #assists class="input" type="text" placeholder="Assists Avg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input #steals class="input" type="text" placeholder="Steals Avg">
+                        </div>
+                    </div>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input #blocks class="input" type="text" placeholder="Blocks Avg">
+                        </div>
+                    </div>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input #turnovers class="input" type="text" placeholder="Turnovers Avg">
+                        </div>
+                    </div>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input #fouls class="input" type="text" placeholder="Fouls Avg">
                         </div>
                     </div>
                 </div>
@@ -287,7 +289,11 @@
                         first.value, last.value, birth.value, age.value, height.value, weight.value, 
                         position.value, experience.value, uniformNumber.value, teamRankOverall.value, gamesPlayed.value,
                         gamesStarted.value, minutesPlayedPerGame.value, overallGoalsMade.value, overallGoalAttempts.value,
-                        overallGoalPercentage.value, averagePointsPerGame.value, twoPointMade.value
+                        overallGoalPercentage.value, averagePointsPerGame.value, twoPointMade.value, twoPointAttempts.value,
+                        twoPointPercentage.value, threePointMade.value, threePointAttempts.value, threePointPercentage.value,
+                        freePointMade.value, freePointAttempts.value, freePointPercentage.value, reboundsOffense.value,
+                        reboundsDefense.value, totalReboundsPerGame.value, assists.value, steals.value, blocks.value, 
+                        turnovers.value, fouls.value
                     )" *ngIf="show">
                         Create
                     </a>

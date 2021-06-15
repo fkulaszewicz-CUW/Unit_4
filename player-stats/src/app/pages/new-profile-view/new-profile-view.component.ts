@@ -19,18 +19,29 @@ export class NewProfileViewComponent implements OnInit {
     weight: string, position: string, experience: string, uniformNumber: string, teamRankOverall: string,
     gamesPlayed: string, gamesStarted: string, minutesPlayedPerGame: string, overallGoalsMade: string,
     overallGoalAttempts: string, overallGoalPercentage: string, averagePointsPerGame: string,
-    twoPointMade: string) {
+    twoPointMade: string, twoPointAttempts: string, twoPointPercentage: string, threePointMade: string,
+    threePointAttempts: string, threePointPercentage: string, freePointMade: string, freePointAttempts: string,
+    freePointPercentage: string, reboundsOffense: string, reboundsDefense: string, totalReboundsPerGame: string,
+    assists: string, steals: string, blocks: string, turnovers: string, fouls: string) {
     this.message = '';
     this.success = '';
     this.show = 'show';
 
-    if (first === '' || last === '') {
-      console.log("Test");
+    if (first === '' || last === '' || birth === '' || age === '' || height === '' || weight === '' || position === '' ||
+      experience === '' || uniformNumber === '' || teamRankOverall === '' || gamesPlayed === '' || gamesStarted === '' ||
+      minutesPlayedPerGame === '' || overallGoalsMade === '' || overallGoalAttempts === '' || overallGoalPercentage === '' ||
+      averagePointsPerGame === '' || twoPointMade === '' || twoPointAttempts === '' || twoPointPercentage === '' ||
+      threePointMade === '' || threePointAttempts === '' || threePointPercentage === '' || freePointMade === '' ||
+      freePointAttempts === '' || freePointPercentage === '' || reboundsOffense === '' || reboundsDefense === '' ||
+      totalReboundsPerGame === '' || assists === '' || steals === '' || blocks === '' || turnovers === '' || fouls === '') {
       this.message = 'show';
     } else {
       this.playerDataService.createPlayer(first, last, birth, age, height, weight, position,
         experience, uniformNumber, teamRankOverall, gamesPlayed, gamesStarted, minutesPlayedPerGame,
-        overallGoalsMade, overallGoalAttempts, overallGoalPercentage, averagePointsPerGame, twoPointMade).subscribe((response: any) => {
+        overallGoalsMade, overallGoalAttempts, overallGoalPercentage, averagePointsPerGame, twoPointMade,
+        twoPointAttempts, twoPointPercentage, threePointMade, threePointAttempts, threePointPercentage,
+        freePointMade, freePointAttempts, freePointPercentage, reboundsOffense, reboundsDefense,
+        totalReboundsPerGame, assists, steals, blocks, turnovers, fouls).subscribe((response: any) => {
           this.success = response.message;
           this.show = '';
           console.log(response.message)

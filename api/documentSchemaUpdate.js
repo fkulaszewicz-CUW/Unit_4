@@ -124,7 +124,7 @@ var playerSchema = mongoose.Schema({
     },
 });
 
-var PlayerUpdate = module.exports = mongoose.model('playersProfileUpdate', playerSchema, 'players_per_game_stats_test');
+var PlayerUpdate = module.exports = mongoose.model('playersProfileUpdate', playerSchema, 'players_per_game_stats');
 
 module.exports.getFullProfile = function (callback, limit) { 
     PlayerUpdate.find(callback).limit(limit);

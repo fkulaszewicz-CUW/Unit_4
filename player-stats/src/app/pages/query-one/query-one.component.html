@@ -6,7 +6,7 @@
             </h1>
 
             <div class="players-list">
-                <a class="players-list-item" *ngFor="let roster of rosters" [routerLink]="['/profiles', roster._id]">
+                <a class="players-list-item" *ngFor="let roster of rosters" [routerLink]="['/queryOne', roster._id]">
                     <p>
                         Rank: #{{roster.teamRankOverall}} {{roster.name.first}} {{roster.name.last}}
                     </p>
@@ -18,16 +18,13 @@
                     <a class="button is-white" routerLink="/">
                         Main Menu
                     </a>
-                    <a class="button is-success" routerLink="/create-player-profile">
-                        New Player Profile
-                    </a>
                 </p>
             </div>
         </div>
 
         <div class="player-profile">
             <h1 class="title has-text-black">
-                Player Profile
+                Player Profile - Q1
             </h1>
             <div class="view-profile-container" *ngIf="profiles">
                 <div class="line-one has-text-weight-bold">
@@ -96,14 +93,6 @@
                         {{profiles.floor.turnovers}}
                         &nbsp;||&nbsp; Fouls: {{profiles.floor.fouls}}
                     </p>
-                </div>
-                <div class="update-delete-button">
-                    <a class="button is-success" [routerLink]="['/update-profile', selectedProfileId]">
-                        Update Player Profile
-                    </a>
-                    <a class="button is-danger" (click)="onDeleteProfileClick()">
-                        Delete Player Profile
-                    </a>
                 </div>
             </div>
         </div>

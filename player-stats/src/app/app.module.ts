@@ -9,6 +9,11 @@ import { WelcomeScreenComponent } from './pages/welcome-screen/welcome-screen.co
 import { HttpClientModule } from '@angular/common/http';
 import { NewProfileViewComponent } from './pages/new-profile-view/new-profile-view.component';
 import { UpdateProfileViewComponent } from './pages/update-profile-view/update-profile-view.component';
+import { QueryOneComponent } from './pages/query-one/query-one.component';
+import { QueryTwoComponent } from './pages/query-two/query-two.component';
+import { QueryThreeComponent } from './pages/query-three/query-three.component';
+import { QueryFourComponent } from './pages/query-four/query-four.component';
+import { QueryFiveComponent } from './pages/query-five/query-five.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { UpdateProfileViewComponent } from './pages/update-profile-view/update-p
     PlayerProfileViewComponent,
     WelcomeScreenComponent,
     NewProfileViewComponent,
-    UpdateProfileViewComponent
+    UpdateProfileViewComponent,
+    QueryOneComponent,
+    QueryTwoComponent,
+    QueryThreeComponent,
+    QueryFourComponent,
+    QueryFiveComponent
   ],
   imports: [
     BrowserModule,
