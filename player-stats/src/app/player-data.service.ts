@@ -55,7 +55,23 @@ export class PlayerDataService {
   }
 
   getQueryOne() {
-    return this.webReqService.get('database/queryOne');
+    return this.webReqService.get(`database/queryOne`);
+  }
+
+  getQueryTwo() {
+    return this.webReqService.get(`database/queryTwo`);
+  }
+
+  getQueryThree() {
+    return this.webReqService.get('database/queryThree');
+  }
+
+  getQueryFour() {
+    return this.webReqService.get('database/queryFour');
+  }
+
+  getQueryFive() {
+    return this.webReqService.get('database/queryFive');
   }
 
 }

@@ -161,7 +161,7 @@ var playerSchema = mongoose.Schema({
 var Player = module.exports = mongoose.model('playersProfile', playerSchema, 'players_per_game_stats');
 
 module.exports.getFullProfile = function (callback, limit) {
-    Player.find(callback).limit(limit);
+    Player.find(callback).sort({"teamRankOverall":1}).limit(limit);
 }
 
 module.exports.getLimitedProfile = function (callback, limit) {
@@ -173,12 +173,12 @@ module.exports.getQueryOne = function (callback, limit) {
 }
 
 module.exports.getQueryTwo = function (callback, limit) {
-    Player.find(callback).select({ _id: 0, "name": 1, "freeThrow": 1 }).sort({ "freeThrow.freePointPercentage": 1 }).limit(3);
+    Player.find(callback).select({ _id: 1, "name": 1, "freeThrow": 1 }).sort({ "freeThrow.freePointPercentage": 1 }).limit(3);
 }
 
 module.exports.getQueryThree = function (callback, limit) {
     Player.find(callback).find({ "experience": { $gte: 5 } }).select({
-        _id: 0, "name": 1, "birth": 1, "age": 1, "characteristics": 1, "experience": 1
+        _id: 1, "name": 1, "birth": 1, "age": 1, "characteristics": 1, "experience": 1
     }).sort({ "experience": 1 });
 }
 
@@ -187,11 +187,11 @@ module.exports.getQueryFour = function (callback, limit) {
         $and: [{ "fieldTwo.twoPointPercentage": { $gt: 0.600 } }, {
             "fieldThree.threePointPercentage": { $gt: 0.300 }
         }]
-    }).select({ _id: 0, "name": 1, "fieldThree": 1, "fieldTwo": 1 })
+    }).select({ _id: 1, "name": 1, "fieldThree": 1, "fieldTwo": 1 })
 }
 
 module.exports.getQueryFive = function (callback, limit) {
     Player.find(callback).find({
         $and: [{ $or: [{ "position": "C" }, { "position": "PF" }] }, { "name.first": { $ne: "Giannis" } }]
-    }).select({ "name": 1, "position": 1, _id: 0, "floor.fouls": 1 }).sort({ "floor.fouls": -1 })
+    }).select({ "name": 1, "position": 1, _id: 1, "floor.fouls": 1 }).sort({ "floor.fouls": -1 })
 }

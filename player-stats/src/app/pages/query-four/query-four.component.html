@@ -6,11 +6,11 @@
             </h1>
 
             <div class="players-list">
-                <!-- <a class="players-list-item" *ngFor="let roster of rosters" [routerLink]="['/profiles', roster._id]">
+                <a class="players-list-item" *ngFor="let roster of rosters" [routerLink]="['/queryFour', roster._id]">
                     <p>
-                        Rank: #{{roster.teamRankOverall}} {{roster.name.first}} {{roster.name.last}}
+                        {{roster.name.first}} {{roster.name.last}}
                     </p>
-                </a> -->
+                </a>
             </div>
 
             <div class="field is-grouped">
@@ -18,86 +18,42 @@
                     <a class="button is-white" routerLink="/">
                         Main Menu
                     </a>
-                    <a class="button is-success" routerLink="/create-player-profile">
-                        New Player Profile
-                    </a>
                 </p>
             </div>
         </div>
 
         <div class="player-profile">
             <h1 class="title has-text-black">
-                Player Profile - Q4
+                <P>
+                    This query returns the players who have both a three-point
+                </P>
+                <p>
+                    percentage greater than .300 (or 30% success rate), and a
+                </p>
+                <p>
+                    two-point percentage greater than .600 (or 60% success rate).
+                </p>
             </h1>
-            <div class="view-profile-container" > 
-                <!-- *ngIf="profiles"> -->
+            <div class="view-profile-container" *ngIf="profiles">
                 <div class="line-one has-text-weight-bold">
-                    <!-- #{{profiles.uniformNumber}} {{profiles.name.first}} {{profiles.name.last}} -->
+                    {{profiles.name.first}} {{profiles.name.last}}
                 </div>
+
                 <div class="line-config">
                     <p>
-                        <!-- Team Rank: #{{profiles.teamRankOverall}} &nbsp;||&nbsp; Position: {{profiles.position}}
-                        &nbsp;||&nbsp; Points PG: {{profiles.fieldGoalsOverall.pointsPerGame}} &nbsp;||&nbsp; Exp:
-                        {{profiles.experience}}
-                        Years -->
-                    </p>
-                </div>
-                <div class="line-config">
-                    <p>
-                        <!-- Birth Date: {{profiles.birth}} &nbsp;||&nbsp; Age: {{profiles.age}} &nbsp;||&nbsp; Height:
-                        {{profiles.characteristics.height}} &nbsp;||&nbsp;
-                        Weight: {{profiles.characteristics.weight}} -->
-                    </p>
-                </div>
-                <div class="line-config">
-                    <p>
-                        <!-- Games - Played: {{profiles.games.played}} &nbsp;||&nbsp; Started: {{profiles.games.started}}
-                        &nbsp;||&nbsp; Minutes Per Game: {{profiles.games.minutesPerGame}} -->
-                    </p>
-                </div>
-                <div class="line-config">
-                    <p>
-                        <!-- Overall Field Goals - Made: {{profiles.fieldGoalsOverall.goalsMade}} &nbsp;||&nbsp; Attempts:
-                        {{profiles.fieldGoalsOverall.goalAttempts}} &nbsp;||&nbsp; Avg:
-                        {{profiles.fieldGoalsOverall.goalPercentage}} -->
-                    </p>
-                </div>
-                <div class="line-config">
-                    <p>
-                        <!-- Overall 2-pt Goals - Made: {{profiles.fieldTwo.twoPointMade}} &nbsp;||&nbsp; Attempts:
+                        Overall 2-pt Goals - Made: {{profiles.fieldTwo.twoPointMade}} &nbsp;||&nbsp; Attempts:
                         {{profiles.fieldTwo.twoPointAttempts}} &nbsp;||&nbsp; Avg:
-                        {{profiles.fieldTwo.twoPointPercentage}} -->
+                        {{profiles.fieldTwo.twoPointPercentage}}
                     </p>
                 </div>
                 <div class="line-config">
                     <p>
-                        <!-- Overall 3-pt Goals - Made: {{profiles.fieldThree.threePointMade}} &nbsp;||&nbsp; Attempts:
+                        Overall 3-pt Goals - Made: {{profiles.fieldThree.threePointMade}} &nbsp;||&nbsp; Attempts:
                         {{profiles.fieldThree.threePointAttempts}} &nbsp;||&nbsp; Avg:
-                        {{profiles.fieldThree.threePointPercentage}} -->
+                        {{profiles.fieldThree.threePointPercentage}}
                     </p>
                 </div>
-                <div class="line-config">
-                    <p>
-                        <!-- Overall Free Points - Made: {{profiles.freeThrow.freePointMade}} &nbsp;||&nbsp; Attempts:
-                        {{profiles.freeThrow.freePointAttempts}} &nbsp;||&nbsp; Avg:
-                        {{profiles.freeThrow.freePointPercentage}} -->
-                    </p>
-                </div>
-                <div class="line-config">
-                    <p>
-                        <!-- Rebounds - Offense: {{profiles.floor.rebounds.offense}} &nbsp;||&nbsp; Defense:
-                        {{profiles.floor.rebounds.defense}} &nbsp;||&nbsp; Total PG:
-                        {{profiles.floor.rebounds.totalPerGame}} -->
-                    </p>
-                </div>
-                <div class="line-config">
-                    <p>
-                        <!-- Assists: {{profiles.floor.assists}} &nbsp;||&nbsp; Steals: {{profiles.floor.steals}}
-                        &nbsp;||&nbsp; Blocks: {{profiles.floor.blocks}} &nbsp;||&nbsp; Turnovers:
-                        {{profiles.floor.turnovers}}
-                        &nbsp;||&nbsp; Fouls: {{profiles.floor.fouls}} -->
-                    </p>
-                </div>
+
             </div>
         </div>
     </div>

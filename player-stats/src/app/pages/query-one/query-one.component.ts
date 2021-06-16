@@ -16,7 +16,9 @@ export class QueryOneComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
-      if (params.profileId) {
+      if (params.profileId === undefined) {
+        console.log("Do not check ID");
+      } else {
         this.playerDataService.getProfile(params.profileId).subscribe((profiles: any) => {
           this.profiles = profiles.data;
         })

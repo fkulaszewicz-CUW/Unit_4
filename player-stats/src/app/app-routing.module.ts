@@ -17,12 +17,16 @@ const routes: Routes = [
   { path: 'profiles', component: PlayerProfileViewComponent },
   { path: 'profiles/:profileId', component: PlayerProfileViewComponent },
   { path: 'update-profile/:profileId', component: UpdateProfileViewComponent },
-  { path: 'queryOne', component: QueryOneComponent},
-  { path: 'queryOne/:profileId', component: QueryOneComponent},
-  { path: 'queryTwo', component: QueryTwoComponent},
-  { path: 'queryThree', component: QueryThreeComponent},
-  { path: 'queryFour', component: QueryFourComponent},
-  { path: 'queryFive', component: QueryFiveComponent}
+  { path: 'queryOne', component: QueryOneComponent },
+  { path: 'queryOne/:profileId', component: QueryOneComponent },
+  { path: 'queryTwo', component: QueryTwoComponent },
+  { path: 'queryTwo/:profileId', component: QueryTwoComponent },
+  { path: 'queryThree', component: QueryThreeComponent },
+  { path: 'queryThree/:profileId', component: QueryThreeComponent },
+  { path: 'queryFour', component: QueryFourComponent },
+  { path: 'queryFour/:profileId', component: QueryFourComponent },
+  { path: 'queryFive', component: QueryFiveComponent },
+  { path: 'queryFive/:profileId', component: QueryFiveComponent }
 ];
 
 @NgModule({
